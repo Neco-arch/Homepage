@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+.Background-asset {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  max-width: 100%;
+  min-height: 600px;
+  background-color: cornflowerblue;
+}
+
+.Top {
+  position: relative;
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+}
+
+.Top_layout {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    min-height: 30vh;
+    max-width: 100%;
+}
+
+.Img-Profile {
+  max-width: 300px;
+  border-radius: 1rem;
+}
+
+
+.About_me {
+  max-width: 50%;
+  min-height: 20%;
+  box-shadow : 2px 2px 2px 1px rgb(229, 228, 228);
+  padding: 2%;
+  border-radius: 0.5rem;
+}
+
+.About_me > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1%;
+}
+
+.About_me > p {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+
