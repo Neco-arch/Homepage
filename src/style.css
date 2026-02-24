@@ -2,60 +2,150 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .Background-asset {
-  display: block;
   position: absolute;
-  z-index: 1;
-  max-width: 100%;
-  min-height: 600px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
   background-color: cornflowerblue;
+  transform: skewY(-0.1rad) translateY(-18%);
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .Top {
   position: relative;
-  padding: 4%;
+  padding: 6%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Top_layout {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    min-height: 30vh;
-    max-width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  max-height: 35dvh;
+  max-width: 100%;
 }
 
 .Img-Profile {
-  max-width: 300px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  margin-right: -0.5rem;
+  object-fit: contain;
+  z-index: 1;
 }
 
-
 .About_me {
+  display: flex;
+  flex-direction: column;
+  overflow: visible; 
+  background-color: white;
   max-width: 50%;
-  min-height: 20%;
-  box-shadow : 2px 2px 2px 1px rgb(229, 228, 228);
-  padding: 2%;
+  box-shadow: 2px 2px 2px 1px rgb(229, 228, 228);
+  padding: 3%;
   border-radius: 0.5rem;
+  gap: 1rem;
 }
 
 .About_me > h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1%;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 .About_me > p {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.25vw, 3rem);
   font-weight: normal;
 }
 
+.Contact_Icon {
+  display: flex;
+  justify-content: end;
+  pointer-events: none;
+  padding: 2.7rem;
+}
 
+#Github_Icon {
+  width: 40px; 
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.MyWork {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 100%;
+  max-height: 150dvh;
+  padding: 3%;
+}
+
+.Heading_Work {
+  font-size: 2.5rem;
+}
+
+.Work-Wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 600px, 1fr));
+  gap: 1rem;
+  max-width: 100%;
+  min-height: 80dvh;
+  
+}
+
+.Work {
+  box-shadow: 2px 2px 2px 1px rgb(229, 228, 228);
+  max-height: 100%;
+}
+
+.ScreenShot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  aspect-ratio: 16  / 7;
+  background-color: red;
+}
+
+.ScreenShot > h2 {
+  font-size: 3rem;
+  font-family: "Playfair Display";
+  color: rgb(255, 249, 249);
+}
+
+.Project_Detail {
+  display: flex ; 
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 4%;
+  font-size: 1.5rem;
+}
+
+.TopCard_Section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LinkSection {
+  width: 100%;
+  height: 100%;
+}
+
+
+#Open_New {
+  max-width: 6%;
+}
+
+.Project_Description > p {
+  font-size: 1.6rem;
+  color: rgb(158, 158, 158);
+}
